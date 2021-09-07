@@ -3,34 +3,41 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Calculetor</title>
+    <title>| Calculetor - WapBorhan |</title>
+    <meta property="og:title" content="| Calculetor - WapBorhan |">
+    <meta property="og:image" content="assets/img/wapborhan.png">
+    <meta name="twitter:image" content="assets/img/wapborhan.png">
+    <meta property="og:image:width" content="700" />
+    <meta property="og:image:height" content="400" />
+    <meta name="Developer" content="Borhan Uddin" />
+    <meta name="description" content="| Calculetor - WapBorhan |" />
+    <meta property="og:url" content="https://wapborhan.com" />
+    <meta property="og:type" content="WEBSITE" />
+    <meta property="og:title" content="| Calculetor - WapBorhan |" />
+    <meta property="og:description" content="| Calculetor - WapBorhan |" />
+    <meta property="og:site_name" content="WapBorhan" />
+    <meta name="twitter:title" content="| Calculetor - WapBorhan |">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="| Calculetor - WapBorhan |">
+    <!--  Style CSS  -->
     <link rel="stylesheet" href="src/styles.css">
 </head>
 
 <body>
-
-
-    <!--  Main phone-body  -->
-
     <div class="container">
-        <!--   section of the top two button along with playing now text   -->
-
         <section class="top-container">
             <div class="left"><i class="fas fa-arrow-left"></i></div>
             <h2 class="heading">Calculetor</h2>
             <div class="right"><i class="fas fa-bars"></i></div>
         </section>
-
-
-
         <div id="wrappers">
             <table style="width:300px; height: 100%;">
                 <tr>
                     <td colspan="5"><input class="poster" type="text" id="result" /></td>
                 </tr>
                 <tr>
-                    <!-- clr() function will call clr to clear all value -->
-                    <td colspan="3"><input class="play oparetorc" type="button" value="C" onclick="clr()" /> </td>
+                    <td colspan="2"><input class="play oparetorc" type="button" value="C" onclick="clr()" /> </td>
+                    <td></td>
                     <td colspan="2"><input class="play oparetorc" type="button" value="Del" id="del" onclick="back()" /></td>
                 </tr>
                 <tr>
@@ -52,31 +59,15 @@
                     <td><input class="back" type="button" value="2" onclick="dis('2')" /> </td>
                     <td><input class="back" type="button" value="3" onclick="dis('3')" /> </td>
                     <td><input class="play" type="button" value="%" onclick="dis('%')" /> </td>
-
                 </tr>
                 <tr>
                     <td><input class="back" type="button" value="0" onclick="dis('0')" /> </td>
                     <td><input class="back" type="button" value="." onclick="dis('.')" /> </td>
                     <td><input class="back" type="button" value="00" onclick="dis('00')" /> </td>
-                    <!-- solve function call function solve to evaluate value -->
                     <td colspan="2"> <input class="play oparetoreq" type="button" value="=" onclick="solve()" /> </td>
                 </tr>
             </table>
         </div>
-
-
-
-
-
-
-
-
-
-
     </div>
-
     <script src="src/main.js"></script>
-
-</body>
-
-</html>
+</body></html>

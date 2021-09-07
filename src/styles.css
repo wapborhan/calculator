@@ -4,9 +4,26 @@
        outline: 0;
    }
 
-   body {
-       /*       background: gray;*/
+   :root {
+       --main-clr: rgb(235, 236, 240);
+       --font-clr: 108, 122, 146;
+       --bright-clr: 255, 255, 255;
+       --dark-clr: 0, 0, 0;
    }
+
+   * {
+       box-sizing: border-box;
+   }
+
+   body {
+       display: grid;
+       place-items: center;
+       height: 100vh;
+       font-family: lato, sans-serif;
+       background-color: var(--main-clr);
+   }
+
+
 
    #wrapper {
        width: 300px;
@@ -26,18 +43,6 @@
        text-align: right;
    }
 
-   .number {
-       width: 45px;
-       aspect-ratio: 1;
-       border-radius: 50%;
-       background: #000f26b4;
-       justify-content: center;
-       align-items: center;
-       color: white;
-       cursor: pointer;
-       box-shadow: inset 1px 1px 0 1px rgba(255, 255, 255, 0.299), inset -1px -1px 0 2px rgba(0, 0, 0, 0.849);
-       font-size: 20px;
-   }
 
    .oparetor,
    .oparetoradd,
@@ -78,39 +83,8 @@
        background: linear-gradient(to right, #fff25d, #ffb442, #ff646d, #ff00b4, #b33eff);
    }
 
-   .number:hover {
-       background: #00122e;
-   }
-
-   .del:hover {
-       background: radial-gradient(rgb(255, 87, 87), rgb(119, 0, 0));
-       box-shadow: inset 1px 1px 0 1px rgba(255, 255, 255, 0.299), inset -1px -1px 0 2px rgba(0, 0, 0, 0.849);
-   }
-
-
-
-
    /**/
 
-
-   :root {
-       --main-clr: rgb(235, 236, 240);
-       --font-clr: 108, 122, 146;
-       --bright-clr: 255, 255, 255;
-       --dark-clr: 0, 0, 0;
-   }
-
-   * {
-       box-sizing: border-box;
-   }
-
-   body {
-       display: grid;
-       place-items: center;
-       height: 100vh;
-       font-family: lato, sans-serif;
-       background-color: var(--main-clr);
-   }
 
    .container {
        padding: 50px;
@@ -164,14 +138,8 @@
    }
 
    .poster {
-       /*
-       width: 16rem;
-       height: 16rem;
-*/
        border-radius: 50%;
        border: 5px solid var(--main-clr);
-       /*       background: url("https://i.ibb.co/J29hjX1/1.jpg") no-repeat scroll center;*/
-       background-size: cover;
        margin: auto;
        position: relative;
        top: -0.6rem;
@@ -179,62 +147,7 @@
            -9px -7px 10px 8px rgba(var(--bright-clr), 1);
    }
 
-   .info {
-       display: flex;
-       flex-direction: column;
-       justify-content: center;
-       align-items: center;
-   }
 
-   .song-name {
-       font-size: 1.4rem;
-       color: rgba(var(--font-clr), 1);
-   }
-
-   .band-name {
-       margin-top: -10px;
-       font-size: 13px;
-       font-weight: bold;
-       color: rgba(var(--font-clr), 0.7);
-   }
-
-   .timeline {
-       appearance: none;
-       width: 19rem;
-       height: 0.6rem;
-       border-radius: 1rem;
-       margin-top: 3rem;
-       box-shadow: inset 3px 2px 3px rgba(var(--dark-clr), 0.2),
-           inset -3px -2px 3px rgba(var(--bright-clr), 0.8);
-   }
-
-   .timeline::-webkit-slider-thumb {
-       appearance: none;
-       width: 25px;
-       height: 25px;
-       cursor: pointer;
-       border: 6px solid var(--main-clr);
-       border-radius: 50%;
-       background: rgb(155, 181, 250);
-       box-shadow: 4px 4px 5px rgba(var(--dark-clr), 0.2),
-           -4px -4px 5px rgba(var(--bright-clr), 0.8);
-       ;
-   }
-
-   .time {
-       font-size: 11px;
-       font-weight: 900;
-       color: rgba(var(--font-clr), 1);
-       position: relative;
-       right: 9rem;
-       top: 0.6rem;
-   }
-
-   .time::after {
-       content: '5.35';
-       position: absolute;
-       left: 18rem;
-   }
 
    .controls {
        margin-top: 1rem;
@@ -258,10 +171,12 @@
        transition: box-shadow 200ms;
        position: relative;
        margin: 5px;
+       font-size: 20px;
    }
 
    .play {
        background: radial-gradient(rgb(136, 169, 255) 0%, rgb(133, 166, 255) 33%, rgb(130, 165, 255) 66%, rgb(129, 164, 255) 100%);
+       color: #fff;
    }
 
    .fa-play,
