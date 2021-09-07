@@ -97,7 +97,10 @@
    }
 
    /**/
-
+   .tbl {
+       width: 300px;
+       height: 100%;
+   }
 
    .container {
        padding: 50px;
@@ -231,3 +234,76 @@
            inset 7px 7px 10px 4px rgba(var(--dark-clr), 0.2),
            inset -7px -7px 10px 4px rgb(129, 164, 255);
    }
+
+
+
+
+   @media only screen and (max-width: 479px) {
+       .container {
+           width: 80%;
+           height: 80%;
+       }
+   }
+
+   @media only screen and (max-width: 575px) {
+       .container {
+           width: 80%;
+           height: 80%;
+       }
+   }
+
+   @media only screen and (max-width: 767px) {
+       .container {
+           width: 80%;
+           height: 80%;
+       }
+   }
+
+   @media only screen and (min-width: 768px) and (max-width: 991px) {
+       .container {
+           width: 80%;
+           /*           height: 80%;*/
+       }
+
+       .heading {
+           font-size: 40px;
+       }
+
+       .left,
+       .right {
+           width: 4.5rem;
+           height: 4.5rem;
+       }
+
+       .tbl {
+           width: 100%;
+           height: 100%;
+       }
+
+       .play,
+       .back,
+       .front {
+           width: 6rem;
+           height: 6rem;
+           margin: 10px;
+           font-size: 45px;
+       }
+
+       .oparetoreq,
+       .oparetorc {
+           height: 80px !important;
+       }
+
+       .oparetoradd {
+           width: 95px !important;
+       }
+
+       #result {
+           padding: 30px 20px;
+       }
+
+   }
+
+   @media only screen and (min-width: 992px) and (max-width: 1199px) {}
+
+   @media only screen and (max-width: 1199px) {}
