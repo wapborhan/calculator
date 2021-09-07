@@ -1,63 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>Calculetor</title>
+    <title>Document</title>
     <link rel="stylesheet" href="src/styles.css">
 </head>
 
-<!-- create table -->
-
 <body>
-    <div id="wrapper">
-        <table style="width:300px; height: 100%;">
-            <tr>
-                <td colspan="5"><input type="text" id="result" /></td>
 
-            </tr>
-            <tr>
-                <!-- clr() function will call clr to clear all value -->
-                <td colspan="3"><input class="oparetorc" type="button" value="C" onclick="clr()" /> </td>
-                <td colspan="2"><input class="oparetorc" type="button" value="Del" id="del" onclick="back()" /></td>
-            </tr>
 
-            <tr>
-                <td><input class="number" type="button" value="7" onclick="dis('7')" /> </td>
-                <td><input class="number" type="button" value="8" onclick="dis('8')" /> </td>
-                <td><input class="number" type="button" value="9" onclick="dis('9')" /> </td>
-                <td><input class="oparetor" type="button" value="*" onclick="dis('*')" /> </td>
-                <td><input class="oparetor" type="button" value="/" onclick="dis('/')" /> </td>
-            </tr>
+    <!--  Main phone-body  -->
 
-            <tr>
-                <td><input class="number" type="button" value="4" onclick="dis('4')" /> </td>
-                <td><input class="number" type="button" value="5" onclick="dis('5')" /> </td>
-                <td><input class="number" type="button" value="6" onclick="dis('6')" /> </td>
-                <td rowspan="2"><input class="oparetoradd" type="button" value="+" onclick="dis('+')" /> </td>
-                <td><input class="oparetor" type="button" value="-" onclick="dis('-')" /> </td>
+    <div class="container">
+        <!--   section of the top two button along with playing now text   -->
 
-            </tr>
+        <section class="top-container">
+            <div class="left"><i class="fas fa-arrow-left"></i></div>
+            <h2 class="heading">Calculetor</h2>
+            <div class="right"><i class="fas fa-bars"></i></div>
+        </section>
 
-            <tr>
-                <td><input class="number" type="button" value="1" onclick="dis('1')" /> </td>
-                <td><input class="number" type="button" value="2" onclick="dis('2')" /> </td>
-                <td><input class="number" type="button" value="3" onclick="dis('3')" /> </td>
-                <td><input class="oparetor" type="button" value="%" onclick="dis('%')" /> </td>
+        <div id="wrappers">
+            <table style="width:300px; height: 100%;">
+                <tr>
+                    <td colspan="5"><input class="poster" type="text" id="result" /></td>
+                </tr>
+                <tr>
+                    <!-- clr() function will call clr to clear all value -->
+                    <td colspan="3"><input class="play oparetorc" type="button" value="C" onclick="clr()" /> </td>
+                    <td colspan="2"><input class="play oparetorc" type="button" value="Del" id="del" onclick="back()" /></td>
+                </tr>
+                <tr>
+                    <td><input class="back" type="button" value="7" onclick="dis('7')" /> </td>
+                    <td><input class="back" type="button" value="8" onclick="dis('8')" /> </td>
+                    <td><input class="back" type="button" value="9" onclick="dis('9')" /> </td>
+                    <td><input class="play" type="button" value="*" onclick="dis('*')" /> </td>
+                    <td><input class="play" type="button" value="/" onclick="dis('/')" /> </td>
+                </tr>
+                <tr>
+                    <td><input class="back" type="button" value="4" onclick="dis('4')" /> </td>
+                    <td><input class="back" type="button" value="5" onclick="dis('5')" /> </td>
+                    <td><input class="back" type="button" value="6" onclick="dis('6')" /> </td>
+                    <td rowspan="2"><input class="play oparetoradd" type="button" value="+" onclick="dis('+')" /> </td>
+                    <td><input class="play" type="button" value="-" onclick="dis('-')" /> </td>
+                </tr>
+                <tr>
+                    <td><input class="back" type="button" value="1" onclick="dis('1')" /> </td>
+                    <td><input class="back" type="button" value="2" onclick="dis('2')" /> </td>
+                    <td><input class="back" type="button" value="3" onclick="dis('3')" /> </td>
+                    <td><input class="play" type="button" value="%" onclick="dis('%')" /> </td>
 
-            </tr>
+                </tr>
+                <tr>
+                    <td><input class="back" type="button" value="0" onclick="dis('0')" /> </td>
+                    <td><input class="back" type="button" value="." onclick="dis('.')" /> </td>
+                    <td><input class="back" type="button" value="00" onclick="dis('00')" /> </td>
+                    <!-- solve function call function solve to evaluate value -->
+                    <td colspan="2"> <input class="play oparetoreq" type="button" value="=" onclick="solve()" /> </td>
+                </tr>
+            </table>
+        </div>
 
-            <tr>
-                <td><input class="number" type="button" value="0" onclick="dis('0')" /> </td>
-                <td><input class="number" type="button" value="." onclick="dis('.')" /> </td>
-                <td><input class="number" type="button" value="00" onclick="dis('00')" /> </td>
-                <!-- solve function call function solve to evaluate value -->
-                <td colspan="2"> <input class="oparetoreq" type="button" value="=" onclick="solve()" /> </td>
-            </tr>
-        </table>
+
+
+
+
+
+
+
+
+
+        <section class="info">
+            <input type="range" class="timeline" value="20" min="0" max="100" disabled>
+        </section>
 
 
     </div>
 
     <script src="src/main.js"></script>
+
 </body></html>
