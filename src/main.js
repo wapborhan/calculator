@@ -17,6 +17,11 @@ function clr() {
     document.getElementById("result").value = ""
 }
 
+//function that clear the display 
+function rot() {
+    let x = document.getElementById("result").value
+    document.getElementById("result").value = Math.sqrt(x);
+}
 
 
 //Delete Button
