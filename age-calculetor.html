@@ -49,42 +49,37 @@
       </div>
     </nav>
     <div class="container">
-      <div class="age-cal text-center pt-5">
-        <div class="list-group">
-          <li class="list-group-item list-group-item-action active" aria-current="true">
-            Calculate Age from Date of Birth
-          </li>
-          <li id="message" class="list-group-item list-group-item-action p-0">
-
-          </li>
-          <li class="list-group-item list-group-item-action">
-            Enter Date of Birth: <input type="date" id="DOB">
-          </li>
-          <li class="list-group-item list-group-item-action">
-            Age at the Date of : <span id="NEWD"></span>
-          </li>
-          <li class="list-group-item list-group-item-action">
-            <button class="btn btn-success" type="submit" onclick="ageCalculator()"> Calculate age </button>
-          </li>
+      <div class="age-cal w-100 d-flex">
+        <div class="forms w-50 text-center pt-5">
+          <div class="list-group">
+            <li class="list-group-item list-group-item-action active" aria-current="true">
+              Calculate Age from Date of Birth
+            </li>
+            <li class="list-group-item list-group-item-action">
+              Enter Date of Birth: <input type="date" id="DOB">
+            </li>
+            <li class="list-group-item list-group-item-action">
+              Age at the Date of : <span id="NEWD"></span>
+            </li>
+            <li class="list-group-item list-group-item-action">
+              <button class="btn btn-success" type="submit" onclick="ageCalculator()"> Calculate age </button>
+            </li>
+          </div>
         </div>
 
-        <div id="card-res" class="card mt-5">
+        <div id="card-res" class="card w-50 mt-5 ms-3">
           <div class="card-header">
             Result
           </div>
           <div class="card-body">
-            <h3 style="color:32A80F" id="age-result" align="center"></h3>
+            <h3 id="message"></h3>
+            <h3 id="age-result" align="center"></h3>
           </div>
         </div>
 
-
       </div>
-
-
-
     </div>
   </div>
-
 
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">

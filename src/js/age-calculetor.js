@@ -15,7 +15,6 @@ const monthNames = [
   "December",
 ];
 var dobMonth = monthNames[today.getMonth()];
-
 var dobDate = today.getDate();
 
 //
@@ -33,13 +32,17 @@ function ageCalculator() {
 
   //check user provide input or not
   if (userinput == null || userinput == "") {
-    document.getElementById("message").innerHTML = "Choose a date please!";
+    var message = (document.getElementById("message").innerHTML =
+      "Please Choose a Date of Birth!");
 
     return false;
   }
 
   //execute if the user entered a date
   else {
+    //
+    var message = document.getElementById("message");
+    message.style.display = "none";
     //extract the year, month, and date from user date input
     var dobYear = dob.getYear();
     var dobMonth = dob.getMonth();
