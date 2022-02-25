@@ -15,7 +15,7 @@
     <nav class="menu">
       <ul class="nav flex-column">
         <li class="nav-item">
-          <a class="nav-link " aria-current="page" href="#">Calculetor</a>
+          <a class="nav-link " aria-current="page" href="index.html">Calculetor</a>
         </li>
         <li class="nav-item">
           <a class="nav-link active" href="#">Age Calculetor</a>
@@ -31,8 +31,25 @@
     </nav>
   </div>
   <div class="main-wraper">
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link" href="#">Features</a>
+            <a class="nav-link" href="#">Pricing</a>
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </div>
+        </div>
+      </div>
+    </nav>
     <div class="container">
-      <div class="age-cal text-center">
+      <div class="age-cal text-center pt-5">
         <div class="list-group">
           <li class="list-group-item list-group-item-action active" aria-current="true">
             Calculate Age from Date of Birth
@@ -44,7 +61,7 @@
             Enter Date of Birth: <input type="date" id="DOB">
           </li>
           <li class="list-group-item list-group-item-action">
-            Age at the Date of : <input type="date" id="NEWD">
+            Age at the Date of : <span id="NEWD"></span>
           </li>
           <li class="list-group-item list-group-item-action">
             <button class="btn btn-success" type="submit" onclick="ageCalculator()"> Calculate age </button>

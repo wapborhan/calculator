@@ -1,3 +1,27 @@
+var today = new Date();
+var dobYear = today.getFullYear();
+const monthNames = [
+  "January",
+  "February",
+  "March",
+  "April",
+  "May",
+  "June",
+  "July",
+  "August",
+  "September",
+  "October",
+  "November",
+  "December",
+];
+var dobMonth = monthNames[today.getMonth()];
+
+var dobDate = today.getDate();
+
+//
+var nowdt = document.getElementById("NEWD");
+nowdt.innerHTML = dobDate + "  " + dobMonth + " " + dobYear;
+
 function ageCalculator() {
   //
   var card = document.getElementById("card-res");

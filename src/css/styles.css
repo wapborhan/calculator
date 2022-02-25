@@ -63,10 +63,7 @@ body {
 
 .main-wraper {
     margin-left: 290px;
-    padding: 0 10px;
-    background: #f2f2f2;
     min-height: 100vh;
-    /* width: 100%; */
 }
 
 #wrapper {
@@ -163,7 +160,7 @@ body {
     box-shadow: 8px 8px 10px rgba(var(--dark-clr), 0.2),
         -8px -8px 10px rgba(var(--bright-clr), 0.8);
     position: relative;
-    width: 435px;
+    width: 400px;
     margin: 50px auto;
 }
 
