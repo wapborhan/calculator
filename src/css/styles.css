@@ -60,15 +60,12 @@ body {
 }
 
 .sidebar-head {
-    padding: 15px 35px;
+    padding: 35px;
     text-align: center;
-    margin-bottom: 20px;
-}
-
-.logoimg {
-    height: 200px;
 
 }
+
+
 
 .separatebd {
     border-bottom: 1px solid #c8c8c8;
