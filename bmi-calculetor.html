@@ -38,7 +38,7 @@
     <div class="container">
       <div class="age-cal w-100 d-flex">
 
-        <div class="card mt-5">
+        <div class="card mt-5 h-100">
           <div class="card-header">BMI Calculator</div>
           <div class="card-body">
 
@@ -58,13 +58,15 @@
         </div>
 
 
-        <div id="card-res" class="card w-50 mt-5 ms-3">
+        <div id="card-ress" class="card w-50 mt-5 ms-3">
           <div class="card-header bg-danger text-light">
             Result
           </div>
-          <div class="card-body">
-            <div id="bmi-result">Your BMI is: 00.00</div>
-            <p class="comment"></p>
+          <div class="card-body text-center">
+            <h2 class="comment"></h2>
+            <div id="chart"></div>
+            <!-- <div id="bmi-result">Your BMI is: 00.00</div> -->
+
           </div>
         </div>
 
@@ -73,9 +75,14 @@
   </div>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
 
-  </script>
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.0.2/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
   <script src="src/js/bmi.js"></script>
 </body>
 
