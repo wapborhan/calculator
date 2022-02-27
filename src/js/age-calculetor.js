@@ -43,6 +43,7 @@ function ageCalculator() {
     //
     var message = document.getElementById("message");
     message.style.display = "none";
+
     //extract the year, month, and date from user date input
     var dobYear = dob.getYear();
     var dobMonth = dob.getMonth();
