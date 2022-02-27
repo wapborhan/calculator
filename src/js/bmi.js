@@ -25,21 +25,37 @@ btn.addEventListener("click", function () {
     document.querySelector(
       ".comment"
     ).innerHTML = `You are <span id="comment">Underweight</span>`;
+    let img = document.getElementById("show-img");
+    img.setAttribute("src", "src/img/bmi/1.png");
   }
   if (BMI >= 18.5 && BMI < 25) {
     document.querySelector(
       ".comment"
     ).innerHTML = `You are <span id="comment">Healthy</span>`;
+    let img = document.getElementById("show-img");
+    img.setAttribute("src", "src/img/bmi/2.png");
   }
   if (BMI >= 25 && BMI < 30) {
     document.querySelector(
       ".comment"
     ).innerHTML = `You are <span id="comment">Overweight</span>`;
+    let img = document.getElementById("show-img");
+    img.setAttribute("src", "src/img/bmi/3.png");
   }
-  if (BMI >= 30) {
+  if (BMI >= 30 && BMI < 40) {
     document.querySelector(
       ".comment"
     ).innerHTML = `You are <span id="comment">Obese</span>`;
+    let img = document.getElementById("show-img");
+    img.setAttribute("src", "src/img/bmi/4.png");
+  }
+
+  if (BMI >= 40) {
+    document.querySelector(
+      ".comment"
+    ).innerHTML = `You are <span id="comment">Extra Obese</span>`;
+    let img = document.getElementById("show-img");
+    img.setAttribute("src", "src/img/bmi/5.png");
   }
 });
 
@@ -64,8 +80,9 @@ option = {
           color: [
             [0.184, "#89b7d8"],
             [0.25, "#73c7a3"],
-            [0.3, "#58D9F9"],
-            [1, "#7CFFB2"],
+            [0.3, "#feda0a"],
+            [0.4, "#f99f51"],
+            [1, "#ef464d"],
           ],
         },
       },
@@ -96,18 +113,25 @@ option = {
         color: "#464646",
         fontSize: 20,
         distance: -60,
-        formatter: function (value) {
-          if (value > 0) {
-            return "A";
-          } else if (value > 6) {
-            return "B";
-          } else if (value > 70) {
-            return "C";
-          } else if (value === 0.125) {
-            return "D";
-          }
-          return "";
-        },
+        formatter: [
+          [0.184, "#89b7d8"],
+          [0.25, "#73c7a3"],
+          [0.3, "#feda0a"],
+          [0.4, "#f99f51"],
+          [1, "#ef464d"],
+        ],
+        // function (value) {
+        //   if (value === 18.5) {
+        //     return "A";
+        //   } else if (value === 25) {
+        //     return "B";
+        //   } else if (value === 30) {
+        //     return "C";
+        //   } else if (value === 40) {
+        //     return "D";
+        //   }
+        //   return "";
+        // }
       },
       title: {
         offsetCenter: [0, "-25%"],
@@ -124,7 +148,7 @@ option = {
       },
       data: [
         {
-          value: 26,
+          value: 30.1,
           name: "BMI",
         },
       ],
