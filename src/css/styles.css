@@ -61,16 +61,30 @@ body {
 
 .sidebar-head {
     padding: 15px 35px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.logoimg {
+    height: 200px;
+
 }
 
 .separatebd {
-    border-bottom: 1px solid #5e5e5e;
+    border-bottom: 1px solid #c8c8c8;
 
 }
 
 a.nav-link {
     padding: 15px 0 15px 55px;
-    border-bottom: 1px solid #888;
+    /* border-bottom: 1px solid #888; */
+}
+
+a.nav-icon::before {
+    content: "\f101";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    margin-right: 10px;
 }
 
 .main-wraper {
