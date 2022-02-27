@@ -87,6 +87,10 @@ a.nav-icon::before {
     margin-right: 10px;
 }
 
+.nav-icon.active {
+    background: #e4e4e4;
+}
+
 .main-wraper {
     margin-left: 290px;
     min-height: 100vh;
