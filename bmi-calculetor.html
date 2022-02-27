@@ -21,10 +21,10 @@
           <a class="nav-link nav-icon " aria-current="page" href="index.html">Calculetor</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-icon active" href="age-calculetor.html">Age Calculetor</a>
+          <a class="nav-link nav-icon " href="age-calculetor.html">Age Calculetor</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-icon" href="bmi-calculetor.html">BMI Calculetor</a>
+          <a class="nav-link nav-icon active" href="bmi-calculetor.html">BMI Calculetor</a>
         </li>
         <li class="nav-item">
           <a class="nav-link nav-icon" href="#">Grade Calculetor</a>
@@ -36,30 +36,35 @@
 
     <div class="container">
       <div class="age-cal w-100 d-flex">
-        <div class="card w-50 text-left mt-5">
-          <div class="card-header bg-primary text-light">
-            Calculate Age from Date of Birth
+
+        <div class="box">
+          <h1>BMI Calculator</h1>
+          <div class="content">
+            <div class="input">
+              <label for="height">Height(feet)</label>
+              <input type="number" id="height">
+            </div>
+            <div class="input">
+              <label for="weight">Weight(kg)</label>
+              <input type="number" id="weight">
+            </div>
+            <button id="calculate">Calculate BMI</button>
           </div>
-          <div class="list-group">
-            <li class="list-group-item list-group-item-action">
-              Enter Date of Birth: <input type="date" id="DOB">
-            </li>
-            <li class="list-group-item list-group-item-action">
-              Age at the Date of : <span id="NEWD"></span>
-            </li>
-            <li class="list-group-item list-group-item-action">
-              <button class="btn btn-success w-100" type="submit" onclick="ageCalculator()"> Calculate age </button>
-            </li>
+          <div class="result">
+
+
+
           </div>
         </div>
 
-        <div id="card-res" class="card w-50 mt-5 ms-3">
+
+        <div id="card-ress" class="card w-50 mt-5 ms-3">
           <div class="card-header bg-danger text-light">
-            Result
+            Your BMI is
           </div>
           <div class="card-body">
-            <h3 id="message"></h3>
-            <h3 id="age-result" align="center"></h3>
+            <div id="result">00.00</div>
+            <p class="comment"></p>
           </div>
         </div>
 
@@ -71,7 +76,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
 
   </script>
-  <script src="src/js/age.js"></script>
+  <script src="src/js/bmi.js"></script>
 </body>
 
 </html>
