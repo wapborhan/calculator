@@ -18,7 +18,7 @@ btn.addEventListener("click", function () {
 
   BMI = BMI.toFixed(2);
 
-  document.querySelector("#result").innerHTML = BMI;
+  document.querySelector("#bmi-result").innerHTML = BMI;
 
   let status = "";
 
@@ -36,5 +36,5 @@ btn.addEventListener("click", function () {
   }
   document.querySelector(
     ".comment"
-  ).innerHTML = `Comment: you are <span id="comment">${status}</span>`;
+  ).innerHTML = `You are <span id="comment">${status}</span>`;
 });
