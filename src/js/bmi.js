@@ -2,8 +2,8 @@ const btn = document.getElementById("calculate");
 
 btn.addEventListener("click", function () {
   // Result Show Hide
-  // var card = document.getElementById("card-res");
-  // card.style.display = "inline-block";
+  var card = document.getElementById("card-res");
+  card.style.display = "inline-block";
 
   let height = document.querySelector("#height").value;
   let weight = document.querySelector("#weight").value;
@@ -57,105 +57,100 @@ btn.addEventListener("click", function () {
     let img = document.getElementById("show-img");
     img.setAttribute("src", "src/img/bmi/5.png");
   }
-});
 
-// Chart
-var dom = document.getElementById("chart");
-var myChart = echarts.init(dom);
-var app = {};
-option = null;
+  // Chart
+  var dom = document.getElementById("chart");
+  var myChart = echarts.init(dom);
+  var app = {};
+  option = null;
 
-option = {
-  series: [
-    {
-      type: "gauge",
-      startAngle: 180,
-      endAngle: 0,
-      min: 0,
-      max: 100,
-      splitNumber: 4,
-      axisLine: {
-        lineStyle: {
-          width: 6,
-          color: [
-            [0.184, "#89b7d8"],
-            [0.25, "#73c7a3"],
-            [0.3, "#feda0a"],
-            [0.4, "#f99f51"],
-            [1, "#ef464d"],
-          ],
+  option = {
+    series: [
+      {
+        type: "gauge",
+        startAngle: 180,
+        endAngle: 0,
+        min: 0,
+        max: 100,
+        splitNumber: 4,
+        axisLine: {
+          lineStyle: {
+            width: 6,
+            color: [
+              [0.184, "#89b7d8"],
+              [0.25, "#73c7a3"],
+              [0.3, "#feda0a"],
+              [0.4, "#f99f51"],
+              [1, "#ef464d"],
+            ],
+          },
         },
-      },
-      pointer: {
-        icon: "path://M12.8,0.7l12,40.1H0.7L12.8,0.7z",
-        length: "12%",
-        width: 20,
-        offsetCenter: [0, "-60%"],
-        itemStyle: {
+        pointer: {
+          icon: "path://M12.8,0.7l12,40.1H0.7L12.8,0.7z",
+          length: "12%",
+          width: 20,
+          offsetCenter: [0, "-60%"],
+          itemStyle: {
+            color: "auto",
+          },
+        },
+        axisTick: {
+          length: 12,
+          lineStyle: {
+            color: "auto",
+            width: 2,
+          },
+        },
+        splitLine: {
+          length: 20,
+          lineStyle: {
+            color: "auto",
+            width: 5,
+          },
+        },
+        // axisLabel: {
+        //   color: "#464646",
+        //   fontSize: 20,
+        //   distance: -60,
+        //   formatter: [
+        //     function (value) {
+        //       if (value === 18.5) {
+        //         return "A";
+        //       } else if (value === 25) {
+        //         return "B";
+        //       } else if (value === 30) {
+        //         return "C";
+        //       } else if (value === 40) {
+        //         return "D";
+        //       }
+        //       return "";
+        //     },
+        //   ],
+        // },
+        title: {
+          offsetCenter: [0, "-25%"],
+          fontSize: 30,
+        },
+        detail: {
+          fontSize: 50,
+          offsetCenter: [0, "0%"],
+          valueAnimation: true,
+          formatter: function (value) {
+            return value + "%";
+          },
           color: "auto",
         },
-      },
-      axisTick: {
-        length: 12,
-        lineStyle: {
-          color: "auto",
-          width: 2,
-        },
-      },
-      splitLine: {
-        length: 20,
-        lineStyle: {
-          color: "auto",
-          width: 5,
-        },
-      },
-      axisLabel: {
-        color: "#464646",
-        fontSize: 20,
-        distance: -60,
-        formatter: [
-          [0.184, "#89b7d8"],
-          [0.25, "#73c7a3"],
-          [0.3, "#feda0a"],
-          [0.4, "#f99f51"],
-          [1, "#ef464d"],
+        data: [
+          {
+            value: BMI,
+            name: "BMI",
+          },
         ],
-        // function (value) {
-        //   if (value === 18.5) {
-        //     return "A";
-        //   } else if (value === 25) {
-        //     return "B";
-        //   } else if (value === 30) {
-        //     return "C";
-        //   } else if (value === 40) {
-        //     return "D";
-        //   }
-        //   return "";
-        // }
       },
-      title: {
-        offsetCenter: [0, "-25%"],
-        fontSize: 30,
-      },
-      detail: {
-        fontSize: 50,
-        offsetCenter: [0, "0%"],
-        valueAnimation: true,
-        formatter: function (value) {
-          return value + "%";
-        },
-        color: "auto",
-      },
-      data: [
-        {
-          value: 30.1,
-          name: "BMI",
-        },
-      ],
-    },
-  ],
-};
+    ],
+  };
 
-if (option && typeof option === "object") {
-  myChart.setOption(option, true);
-}
+  if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+  }
+});
