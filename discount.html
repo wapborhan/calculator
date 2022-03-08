@@ -1,0 +1,86 @@
+<html>
+
+<head>
+  <title> BMI - Calculator</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/discount.css">
+  <link rel="stylesheet" href="src/css/styles.css">
+</head>
+
+<body>
+
+  <div class="sidebar">
+    <div class="sidebar-head">
+      <img src="src/img/logo.png" class="img-fluid logoimg" alt="">
+
+    </div>
+    <div class="separatebd"></div>
+    <nav class="menu">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link nav-icon " aria-current="page" href="index.html">Calculator</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-icon " href="age.html">Age Calculator</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-icon " href="bmi.html">BMI Calculator</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-icon" href="grade.html">Grade Calculator</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link nav-icon active" href="discount.html">Discount Calculator</a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="main-wraper">
+
+    <div class="container">
+      <div class="card mt-5">
+        <div class="card-header">Discount Calculator</div>
+
+        <div class="card-body">
+          <form action="#">
+            <div class="input-item">
+              <label for="amount"> Enter bill amount: </label>
+              <input type="text" id="amount">
+            </div>
+
+            <div class="input-item">
+              <label for="discount-percentage">Enter discount %</label>
+              <input type="text" name="percentage" id="discount-percentage" id="amount">
+            </div>
+
+            <div class="input-item">
+              <label for="discount-amount"> Discount amount: </label>
+              <input type="text" id="discount-amount" disabled>
+            </div>
+
+            <div class="input-item">
+              <label for="pay" aria-disabled="true"> Final Pay:</label>
+              <input type="text" id="pay" disabled>
+            </div>
+
+            <button type="submit" class="calculate">calculate</button>
+            <input type="reset" value="Reset" onClick="window.location.reload()" class="reset">
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/5.0.2/echarts.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+  <script src="src/js/discount.js"></script>
+</body>
+
+</html>
