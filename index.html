@@ -1,1 +1,97 @@
-<!DOCTYPE html><html lang="en"><head> <meta charset="UTF-8"> <title>Calculetor - WapBorhan </title> <meta property="og:title" content="| Calculetor - WapBorhan |"> <meta property="og:image" content="assets/img/wapborhan.png"> <meta name="twitter:image" content="assets/img/wapborhan.png"> <meta property="og:image:width" content="700"/> <meta property="og:image:height" content="400"/> <meta name="Developer" content="Borhan Uddin"/> <meta name="description" content="| Calculetor - WapBorhan |"/> <meta property="og:url" content="https://wapborhan.com"/> <meta property="og:type" content="WEBSITE"/> <meta property="og:title" content="| Calculetor - WapBorhan |"/> <meta property="og:description" content="| Calculetor - WapBorhan |"/> <meta property="og:site_name" content="WapBorhan"/> <meta name="twitter:title" content="| Calculetor - WapBorhan |"> <meta name="twitter:card" content="summary_large_image"> <meta name="twitter:description" content="| Calculetor - WapBorhan |"> <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"> <link rel="stylesheet" href="src/css/styles.css"></head><body> <div class="sidebar"> <div class="sidebar-head"> <img src="src/img/logo.png" class="img-fluid logoimg" alt=""> </div><div class="separatebd"></div><nav class="menu"> <ul class="nav flex-column"> <li class="nav-item"> <a class="nav-link nav-icon active" aria-current="page" href="index.html">Calculetor</a> </li><li class="nav-item"> <a class="nav-link nav-icon " href="age.html">Age Calculetor</a> </li><li class="nav-item"> <a class="nav-link nav-icon" href="bmi.html">BMI Calculetor</a> </li><li class="nav-item"> <a class="nav-link nav-icon" href="grade.html">Grade Calculetor</a> </li><li class="nav-item"> <a class="nav-link nav-icon active" href="discount.html">Discount Calculator</a> </li></ul> </nav> </div><div class="main-wraper"> <div class="main-container"> <section class="top-container"> <div class="left">🖩</div><h2 class="heading">SR Calculetor</h2> <div class="right">🖩</div></section> <div id="wrappers"> <table class="tbl"> <tr> <td colspan="5"><input class="poster" type="text" id="result"/></td></tr><tr> <td colspan="2"><input class="play oparetorc" type="button" value="AC" id="del" onclick="back()"/> </td><td></td><td colspan="2"><input class="play oparetorc" type="button" value="C" onclick="clr()"/> </td></tr><tr> <td><input class="back" type="button" value="7" onclick="dis('7')"/> </td><td><input class="back" type="button" value="8" onclick="dis('8')"/> </td><td><input class="back" type="button" value="9" onclick="dis('9')"/> </td><td><input class="play" type="button" value="*" onclick="dis('*')"/> </td><td><input class="play" type="button" value="/" onclick="dis('/')"/> </td></tr><tr> <td><input class="back" type="button" value="4" onclick="dis('4')"/> </td><td><input class="back" type="button" value="5" onclick="dis('5')"/> </td><td><input class="back" type="button" value="6" onclick="dis('6')"/> </td><td rowspan="2"><input class="play oparetoradd" type="button" value="+" onclick="dis('+')"/> </td><td><input class="play" type="button" value="-" onclick="dis('-')"/> </td></tr><tr> <td><input class="back" type="button" value="1" onclick="dis('1')"/> </td><td><input class="back" type="button" value="2" onclick="dis('2')"/> </td><td><input class="back" type="button" value="3" onclick="dis('3')"/> </td><td><input class="play" type="button" value="√" onclick="rot()"/> </td></tr><tr> <td><input class="back" type="button" value="0" onclick="dis('0')"/> </td><td><input class="back" type="button" value="." onclick="dis('.')"/> </td><td><input class="back" type="button" value="00" onclick="dis('00')"/> </td><td colspan="2"> <input class="play oparetoreq" type="button" value="=" onclick="solve()"/> </td></tr></table> </div></div></div><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script> <script src="src/js/index.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Calculetor - WapBorhan </title>
+  <meta property="og:title" content="| Calculetor - WapBorhan |">
+  <meta property="og:image" content="assets/img/wapborhan.png">
+  <meta name="twitter:image" content="assets/img/wapborhan.png">
+  <meta property="og:image:width" content="700" />
+  <meta property="og:image:height" content="400" />
+  <meta name="Developer" content="Borhan Uddin" />
+  <meta name="description" content="| Calculetor - WapBorhan |" />
+  <meta property="og:url" content="https://wapborhan.com" />
+  <meta property="og:type" content="WEBSITE" />
+  <meta property="og:title" content="| Calculetor - WapBorhan |" />
+  <meta property="og:description" content="| Calculetor - WapBorhan |" />
+  <meta property="og:site_name" content="WapBorhan" />
+  <meta name="twitter:title" content="| Calculetor - WapBorhan |">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:description" content="| Calculetor - WapBorhan |">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="src/css/styles.css">
+</head>
+
+<body>
+  <div class="sidebar">
+    <div class="sidebar-head"> <img src="src/img/logo.png" class="img-fluid logoimg" alt=""> </div>
+    <div class="separatebd"></div>
+    <nav class="menu">
+      <ul class="nav flex-column">
+        <li class="nav-item"> <a class="nav-link nav-icon active" aria-current="page" href="index.html">Calculetor</a>
+        </li>
+        <li class="nav-item"> <a class="nav-link nav-icon " href="https://code.wapborhan.com/age-calculator/">Age
+            Calculetor</a> </li>
+        <li class="nav-item"> <a class="nav-link nav-icon" href="https://code.wapborhan.com/bmi-calculator/">BMI
+            Calculetor</a> </li>
+        <li class="nav-item"> <a class="nav-link nav-icon" href="https://code.wapborhan.com/grade-calculator/">Grade
+            Calculetor</a> </li>
+        <li class="nav-item"> <a class="nav-link nav-icon"
+            href="https://code.wapborhan.com/discount-calculator/">Discount Calculator</a> </li>
+      </ul>
+    </nav>
+  </div>
+  <div class="main-wraper">
+    <div class="main-container">
+      <section class="top-container">
+        <div class="left">🖩</div>
+        <h2 class="heading">SR Calculetor</h2>
+        <div class="right">🖩</div>
+      </section>
+      <div id="wrappers">
+        <table class="tbl">
+          <tr>
+            <td colspan="5"><input class="poster" type="text" id="result" /></td>
+          </tr>
+          <tr>
+            <td colspan="2"><input class="play oparetorc" type="button" value="AC" id="del" onclick="back()" /> </td>
+            <td></td>
+            <td colspan="2"><input class="play oparetorc" type="button" value="C" onclick="clr()" /> </td>
+          </tr>
+          <tr>
+            <td><input class="back" type="button" value="7" onclick="dis('7')" /> </td>
+            <td><input class="back" type="button" value="8" onclick="dis('8')" /> </td>
+            <td><input class="back" type="button" value="9" onclick="dis('9')" /> </td>
+            <td><input class="play" type="button" value="*" onclick="dis('*')" /> </td>
+            <td><input class="play" type="button" value="/" onclick="dis('/')" /> </td>
+          </tr>
+          <tr>
+            <td><input class="back" type="button" value="4" onclick="dis('4')" /> </td>
+            <td><input class="back" type="button" value="5" onclick="dis('5')" /> </td>
+            <td><input class="back" type="button" value="6" onclick="dis('6')" /> </td>
+            <td rowspan="2"><input class="play oparetoradd" type="button" value="+" onclick="dis('+')" /> </td>
+            <td><input class="play" type="button" value="-" onclick="dis('-')" /> </td>
+          </tr>
+          <tr>
+            <td><input class="back" type="button" value="1" onclick="dis('1')" /> </td>
+            <td><input class="back" type="button" value="2" onclick="dis('2')" /> </td>
+            <td><input class="back" type="button" value="3" onclick="dis('3')" /> </td>
+            <td><input class="play" type="button" value="√" onclick="rot()" /> </td>
+          </tr>
+          <tr>
+            <td><input class="back" type="button" value="0" onclick="dis('0')" /> </td>
+            <td><input class="back" type="button" value="." onclick="dis('.')" /> </td>
+            <td><input class="back" type="button" value="00" onclick="dis('00')" /> </td>
+            <td colspan="2"> <input class="play oparetoreq" type="button" value="=" onclick="solve()" /> </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="src/js/index.js"></script>
+</body>
+
+</html>
